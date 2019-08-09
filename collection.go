@@ -40,6 +40,10 @@ func NewCollection(options *CollectionOptions) *Collection {
 	}
 }
 
+func (col *Collection) Page(n uint16) {
+	col.page = n
+}
+
 // Next makes the col.req
 func (col *Collection) Next() (*Collection, error) {
 	// setup query params
